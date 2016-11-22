@@ -27,7 +27,7 @@ public class DiretorInterface extends javax.swing.JFrame {
     public DiretorInterface() {
         initComponents();
         
-        //ViewCadastrarFuncionario.setVisible(false);
+        
         DesktopMenu.add(socioFrame);
         socioFrame.setVisible(true);
         socioFrame.setUI(null);
@@ -57,11 +57,11 @@ public class DiretorInterface extends javax.swing.JFrame {
         AutorizarFuncionarioPressed = new javax.swing.JButton();
         CadastrarFuncionaroPressed = new javax.swing.JButton();
         FiltrarFuncionarioPressed = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         DesktopMenu = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 700));
 
         BgBranco.setBackground(new java.awt.Color(255, 255, 255));
         BgBranco.setPreferredSize(new java.awt.Dimension(1024, 712));
@@ -99,6 +99,13 @@ public class DiretorInterface extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(158, 189, 83));
+        jButton1.setFont(new java.awt.Font("Avenir Next", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Sair");
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+
         javax.swing.GroupLayout BgMenuLayout = new javax.swing.GroupLayout(BgMenu);
         BgMenu.setLayout(BgMenuLayout);
         BgMenuLayout.setHorizontalGroup(
@@ -109,23 +116,29 @@ public class DiretorInterface extends javax.swing.JFrame {
                     .addComponent(FiltrarFuncionarioPressed)
                     .addComponent(AutorizarFuncionarioPressed))
                 .addGap(0, 4, Short.MAX_VALUE))
+            .addGroup(BgMenuLayout.createSequentialGroup()
+                .addGap(134, 134, 134)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         BgMenuLayout.setVerticalGroup(
             BgMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BgMenuLayout.createSequentialGroup()
-                .addGap(219, 219, 219)
+                .addGap(220, 220, 220)
                 .addComponent(CadastrarFuncionaroPressed)
                 .addGap(44, 44, 44)
                 .addComponent(FiltrarFuncionarioPressed)
                 .addGap(44, 44, 44)
                 .addComponent(AutorizarFuncionarioPressed)
-                .addContainerGap(219, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(14, 14, 14))
         );
 
         DesktopMenu.setBackground(new java.awt.Color(255, 255, 255));
         DesktopMenu.setLayout(new java.awt.BorderLayout());
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(662, 706));
+        jPanel1.setPreferredSize(new java.awt.Dimension(662, 712));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -147,7 +160,7 @@ public class DiretorInterface extends javax.swing.JFrame {
             .addGroup(BgBrancoLayout.createSequentialGroup()
                 .addComponent(BgMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(DesktopMenu, javax.swing.GroupLayout.DEFAULT_SIZE, 662, Short.MAX_VALUE)
+                .addComponent(DesktopMenu)
                 .addContainerGap())
         );
         BgBrancoLayout.setVerticalGroup(
@@ -286,6 +299,7 @@ public class DiretorInterface extends javax.swing.JFrame {
     private javax.swing.JButton CadastrarFuncionaroPressed;
     private javax.swing.JDesktopPane DesktopMenu;
     private javax.swing.JButton FiltrarFuncionarioPressed;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
